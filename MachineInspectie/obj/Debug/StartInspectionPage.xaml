@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="MachineInspectie.StartInspectionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MachineInspectie"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+    <Grid Background="White">
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="68,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="38" Width="219" BorderBrush="#FF06428E"/>
+        <TextBox x:Name="txtHour" HorizontalAlignment="Left" Margin="315,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="38" Width="219" BorderBrush="#FF06428E" InputScope="Number"/>
+            <TextBlock x:Name="lblName" HorizontalAlignment="Left" Margin="68,116,0,0" TextWrapping="Wrap" Text="text" VerticalAlignment="Top" FontSize="21.333" Foreground="Black" FontWeight="Bold"/>
+        <TextBlock x:Name="lblLocation" HorizontalAlignment="Left" Margin="315,116,0,0" TextWrapping="Wrap" Text="text" VerticalAlignment="Top" FontSize="21.333" Foreground="Black" FontWeight="Bold"/>
+        <TextBlock x:Name="lblMatis" HorizontalAlignment="Left" Margin="68,196,0,0" TextWrapping="Wrap" Text="text" VerticalAlignment="Top" FontSize="21.333" Foreground="Black" FontWeight="Bold"/>
+        <TextBlock x:Name="lblHour" HorizontalAlignment="Left" Margin="315,196,0,0" TextWrapping="Wrap" Text="text" VerticalAlignment="Top" FontSize="21.333" Foreground="Black" FontWeight="Bold"/>
+        <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="101" Margin="10,10,0,0" VerticalAlignment="Top" Width="587" Source="Assets/vanGansewinkel.png"/>
+        <Button x:ConnectionId='1' x:Name="btnStart" IsEnabled="False" HorizontalAlignment="Left" Margin="315,284,0,0" VerticalAlignment="Top" Foreground="Black" BorderBrush="#FF06428E" Height="86" Width="219" Background="#FF30DC0A" FontSize="21.333" FontWeight="Bold"                       />
+        <Button x:ConnectionId='2' x:Name="btnReset" Content="" HorizontalAlignment="Left" Margin="68,284,0,0" VerticalAlignment="Top" Foreground="Black" BorderBrush="#FF06428E" Height="86" Width="219" Background="#FFD41212" FontSize="21.333" FontWeight="Bold"                       />
+        <Button x:ConnectionId='3' x:Name="btnLocation" HorizontalAlignment="Left" Margin="315,138,0,0" VerticalAlignment="Top" Foreground="Black" BorderBrush="#FF06428E" Height="56" Width="219"                          >
+            <Button.Flyout>
+                <ListPickerFlyout x:ConnectionId='5' x:Name="ListPickerLocatie" Placement="Full"                                             Title="{Binding ListHeaderLanguage}"/>
+            </Button.Flyout>
+        </Button>
+
+        <Button x:Name="btnMatis" HorizontalAlignment="Left" Margin="68,217,0,0" VerticalAlignment="Top" Foreground="Black" BorderBrush="#FF06428E" Height="56" Width="219" IsEnabled="False">
+            <Button.Flyout>
+                <ListPickerFlyout x:ConnectionId='4' x:Name="ListPickerMatis" Placement="Full"                                           Title="{Binding ListHeaderLanguage}"/>
+            </Button.Flyout>
+        </Button>
+
+    </Grid>
+</Page>
+

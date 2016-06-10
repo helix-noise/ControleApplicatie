@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="MachineInspectie.StartInspectionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MachineInspectie"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+    <Grid Background="White">
+        <Frame x:Name="UserInputFrame" Visibility="Visible">
+            <Grid Background="White">
+                <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="68,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="38" Width="219"/>
+                <TextBox x:Name="txtHour" HorizontalAlignment="Left" Margin="315,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="38" Width="219"  InputScope="Number" TextChanged="txtHour_TextChanged" MaxLength="8"/>
+                <TextBlock x:Name="lblName" HorizontalAlignment="Left" Margin="68,116,0,0" TextWrapping="Wrap" Text="text" VerticalAlignment="Top" FontSize="21.333" Foreground="Black" FontWeight="Bold"/>
+                <TextBlock x:Name="lblLocation" HorizontalAlignment="Left" Margin="315,116,0,0" TextWrapping="Wrap" Text="text" VerticalAlignment="Top" FontSize="21.333" Foreground="Black" FontWeight="Bold"/>
+                <TextBlock x:Name="lblMatis" HorizontalAlignment="Left" Margin="68,196,0,0" TextWrapping="Wrap" Text="text" VerticalAlignment="Top" FontSize="21.333" Foreground="Black" FontWeight="Bold"/>
+                <TextBlock x:Name="lblHour" HorizontalAlignment="Left" Margin="315,196,0,0" TextWrapping="Wrap" Text="text" VerticalAlignment="Top" FontSize="21.333" Foreground="Black" FontWeight="Bold"/>
+                <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="101" Margin="10,10,0,0" VerticalAlignment="Top" Width="587" Source="../../Assets/vanGansewinkel.png"/>
+                <Button x:Name="btnStart" IsEnabled="False" HorizontalAlignment="Left" Margin="315,284,0,0" VerticalAlignment="Top" Foreground="Black" BorderBrush="#FF06428E" Height="86" Width="219" Background="#FF30DC0A" FontSize="21.333" FontWeight="Bold" Click="btnStart_Click"/>
+                <Button x:Name="btnReset" Content="" HorizontalAlignment="Left" Margin="68,284,0,0" VerticalAlignment="Top" Foreground="Black" BorderBrush="#FF06428E" Height="86" Width="219" Background="#FFD41212" FontSize="21.333" FontWeight="Bold" Click="btnReset_Click"/>
+                <Button x:Name="btnLocation" HorizontalAlignment="Left" Margin="315,138,0,0" VerticalAlignment="Top" Foreground="Black" BorderBrush="#FF06428E" Height="56" Width="219" Click="btnLocation_Click">
+                    <Button.Flyout>
+                        <ListPickerFlyout x:Name="ListPickerLocatie" Placement="Full" ItemsPicked="ListPickerLocatie_ItemsPicked" Title="{Binding ListHeaderLanguage}"/>
+                    </Button.Flyout>
+                </Button>
+
+                <Button x:Name="btnMatis" HorizontalAlignment="Left" Margin="68,217,0,0" VerticalAlignment="Top" Foreground="Black" BorderBrush="#FF06428E" Height="56" Width="219" IsEnabled="False" Click="btnMatis_Click">
+                    <Button.Flyout>
+                        <ListPickerFlyout x:Name="ListPickerMatis" Placement="Full" ItemsPicked="ListPickerMatis_ItemsPicked" Title="{Binding ListHeaderLanguage}"/>
+                    </Button.Flyout>
+                </Button>
+            </Grid>
+        </Frame>
+        <!--<Frame x:Name="QuestionFrame" Visibility="Visible">
+            <Grid Background="White">
+                <Button x:Name="btnOk" Content="Ok" HorizontalAlignment="Left" Margin="315,284,0,0" VerticalAlignment="Top" Foreground="Black" BorderBrush="#FF06428E" Height="86" Width="219" Background="#FF30DC0A" FontSize="21.333" FontWeight="Bold" Click="btnOk_Nok_Click"></Button>
+                <Button x:Name="btnNok" Content="Nok" HorizontalAlignment="Left" Margin="68,284,0,0" VerticalAlignment="Top" Foreground="Black" BorderBrush="#FF06428E" Height="86" Width="219" Background="#FFD41212" FontSize="21.333" FontFamily="Bold" Click="btnOk_Nok_Click"></Button>
+                <TextBlock x:Name="lblQuestion" HorizontalAlignment="Left" Margin="10,63,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="204" Width="587" Foreground="Black" FontSize="36" FontWeight="Bold"/>
+            </Grid>
+        </Frame>
+        <Frame x:Name="PhotoFrame" Visibility="Collapsed">
+            <Grid Background="White">
+                <Image x:Name="imgPhoto" HorizontalAlignment="Left" Height="282" VerticalAlignment="Top" Width="587" Margin="10,10,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
+                    <Image.RenderTransform>
+                        <CompositeTransform Rotation="180"/>
+                    </Image.RenderTransform>
+                </Image>
+                <Button x:Name="btnCapture" Content="" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" Height="97" Width="189" BorderBrush="#FF06428D" Foreground="Black" Click="btnCapture_Click"/>
+                <Button x:Name="btnCaptureReset" IsEnabled="False" Content="Reset" HorizontalAlignment="Left" Margin="204,303,0,0" VerticalAlignment="Top" Height="97" Width="201" BorderBrush="#FF06428D" Foreground="Black" Click="btnCaptureReset_Click"/>
+                <Button x:Name="btnCaptureOk" IsEnabled="False" Content="Ok" HorizontalAlignment="Left" Margin="410,303,0,0" VerticalAlignment="Top" Height="97" Width="187" BorderBrush="#FF06428D" Foreground="Black" Click="btnCaptureOk_Click"/>
+                <CaptureElement x:Name="cePreview" HorizontalAlignment="Left" Height="282" VerticalAlignment="Top" Width="587" Margin="10,10,0,0" Stretch="Fill"/>
+            </Grid>
+        </Frame>-->
+    </Grid>
+</Page>

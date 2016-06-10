@@ -1,0 +1,105 @@
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\App.xbf
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MainPage.xbf
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectie.xr.xml
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectie.exe
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectie.pdb
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\resources.pri
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\AppxManifest.xml
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectie.build.appxrecipe
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectionLibrary.dll
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\Newtonsoft.Json.dll
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectionLibrary.pdb
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectionLibrary.pri
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\Newtonsoft.Json.xml
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MachineInspectie.csprojResolveAssemblyReference.cache
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\App.g.i.cs
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\App.g.cs
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MainPage.g.i.cs
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MainPage.g.cs
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\XamlTypeInfo.g.cs
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\App.xaml
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MainPage.xaml
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\App.xbf
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MainPage.xbf
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\XamlSaveStateFile.xml
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MachineInspectie.exe
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MachineInspectie.pdb
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MachineInspectie.csproj.GenerateResource.Cache
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\priconfig.xml
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\priconfig.xml.intermediate
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\layout.resfiles
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\layout.resfiles.intermediate
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\resources.resfiles
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\resources.resfiles.intermediate
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\pri.resfiles
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\pri.resfiles.intermediate
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\qualifiers.txt
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\qualifiers.txt.intermediate
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MachineInspectionLibrary.pri.xml
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\ProjectArchitectures.txt
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\SelectionPage.xbf
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\SelectionPage.g.i.cs
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\SelectionPage.g.cs
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\SelectionPage.xaml
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\SelectionPage.xbf
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\StartInspectionPage.xbf
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\StartInspectionPage.g.i.cs
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\StartInspectionPage.g.cs
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\StartInspectionPage.xaml
+C:\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\StartInspectionPage.xbf
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\App.xbf
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\Views\MachineInspection\InspectionComplete.xbf
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\Views\MachineInspection\QuestionPage.xbf
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\Views\MachineInspection\StartInspectionPage.xbf
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\Views\SelectionPage.xbf
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectie.xr.xml
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectie.exe
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectie.pdb
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\resources.pri
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\AppxManifest.xml
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectie.build.appxrecipe
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectionLibrary.dll
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectionLibrary.pdb
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\MachineInspectionLibrary.pri
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\App.g.i.cs
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\App.g.cs
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\MachineInspection\InspectionComplete.g.i.cs
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\MachineInspection\InspectionComplete.g.cs
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\MachineInspection\QuestionPage.g.i.cs
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\MachineInspection\QuestionPage.g.cs
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\MachineInspection\StartInspectionPage.g.i.cs
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\MachineInspection\StartInspectionPage.g.cs
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\SelectionPage.g.i.cs
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\SelectionPage.g.cs
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\App.xaml
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\MachineInspection\QuestionPage.xaml
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\MachineInspection\StartInspectionPage.xaml
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\SelectionPage.xaml
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\App.xbf
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\MachineInspection\QuestionPage.xbf
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\MachineInspection\StartInspectionPage.xbf
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\SelectionPage.xbf
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\XamlSaveStateFile.xml
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\MachineInspection\InspectionComplete.xaml
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\Views\MachineInspection\InspectionComplete.xbf
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MachineInspectie.exe
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MachineInspectie.pdb
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MachineInspectie.csproj.GenerateResource.Cache
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\priconfig.xml
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\priconfig.xml.intermediate
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\layout.resfiles
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\layout.resfiles.intermediate
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\resources.resfiles
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\resources.resfiles.intermediate
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\pri.resfiles
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\pri.resfiles.intermediate
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\qualifiers.txt
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MachineInspectionLibrary.pri.xml
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\ProjectArchitectures.txt
+C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\Debug\MachineInspectie.csprojResolveAssemblyReference.cache

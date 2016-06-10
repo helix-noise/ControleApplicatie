@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="MachineInspectie.SelectionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MachineInspectie"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interop="using:Windows.UI.Xaml.Interop"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+
+    <Grid Background="White">
+        <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="101" Margin="10,10,0,0" VerticalAlignment="Top" Width="587" Source="../Assets/vanGansewinkel.png"/>
+        <Button x:ConnectionId='1' x:Name="btnMachineInspection" Content="" HorizontalAlignment="Left" Margin="145,156,0,0" VerticalAlignment="Top" Height="87" Width="311" Background="#FF06428E" FontSize="24" FontFamily="Nirmala UI" BorderBrush="#FF06428E"                                   />
+        <ToggleButton x:ConnectionId='2' x:Name="tgbNl" Content="NL" HorizontalAlignment="Left" Margin="374,101,0,0" VerticalAlignment="Top" Foreground="Black" Width="75" IsChecked="True"                     BorderBrush="#FF06428E"/>
+        <ToggleButton x:ConnectionId='3' x:Name="tgbFr" Content="FR" HorizontalAlignment="Left" Margin="488,101,0,0" VerticalAlignment="Top" BorderBrush="#FF06428E" Foreground="Black" Width="75"                    />
+
+    </Grid>
+</Page>
+

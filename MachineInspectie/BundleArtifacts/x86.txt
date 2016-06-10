@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\bin\x86\Release\MachineInspectie_1.0.0.3_x86.appx
+SymbolPackage=C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\AppPackages\MachineInspectie_1.0.0.3_Test\MachineInspectie_1.0.0.3_x86.appxsym

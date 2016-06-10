@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="9e82287d-e049-498c-9680-f928165be648" version="1.0" primary="true">
+		<Qualifiers>
+			<Scale>240</Scale>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/App.xbf">
+				<Candidate type="Path">
+					<Value>App.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MachineInspectie.xr.xml" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/MachineInspectie.xr.xml">
+				<Candidate type="Path">
+					<Value>MachineInspectie.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="StoreManifest.xml" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/StoreManifest.xml">
+				<Candidate type="Path">
+					<Value>StoreManifest.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="Icon.png" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Assets/Icon.png">
+					<Candidate type="Path">
+						<Value>Assets\Icon.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="IconMedium.png" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Assets/IconMedium.png">
+					<Candidate type="Path">
+						<Value>Assets\IconMedium.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="IconSmall.png" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Assets/IconSmall.png">
+					<Candidate type="Path">
+						<Value>Assets\IconSmall.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="IconSmall1.png" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Assets/IconSmall1.png">
+					<Candidate type="Path">
+						<Value>Assets\IconSmall1.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="IconWide.png" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Assets/IconWide.png">
+					<Candidate type="Path">
+						<Value>Assets\IconWide.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="LogoNok.png" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Assets/LogoNok.png">
+					<Candidate type="Path">
+						<Value>Assets\LogoNok.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="LogoOk.png" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Assets/LogoOk.png">
+					<Candidate type="Path">
+						<Value>Assets\LogoOk.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Assets/SplashScreen.png">
+					<Candidate type="Path">
+						<Value>Assets\SplashScreen.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Assets/StoreLogo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\StoreLogo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="vanGansewinkel.png" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Assets/vanGansewinkel.png">
+					<Candidate type="Path">
+						<Value>Assets\vanGansewinkel.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Views">
+				<NamedResource name="SelectionPage.xbf" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Views/SelectionPage.xbf">
+					<Candidate type="Path">
+						<Value>Views\SelectionPage.xbf</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="MachineInspection">
+					<NamedResource name="InspectionComplete.xbf" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Views/MachineInspection/InspectionComplete.xbf">
+						<Candidate type="Path">
+							<Value>Views\MachineInspection\InspectionComplete.xbf</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="QuestionPage.xbf" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Views/MachineInspection/QuestionPage.xbf">
+						<Candidate type="Path">
+							<Value>Views\MachineInspection\QuestionPage.xbf</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="StartInspectionPage.xbf" uri="ms-resource://9e82287d-e049-498c-9680-f928165be648/Files/Views/MachineInspection/StartInspectionPage.xbf">
+						<Candidate type="Path">
+							<Value>Views\MachineInspection\StartInspectionPage.xbf</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

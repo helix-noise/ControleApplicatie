@@ -1,0 +1,23 @@
+﻿[ResourceMetadata]
+"ResourceDimensions"		"scale-240"
+"ResourceDimensions"		"language-en-us"
+
+[Files]
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\split.pri"			"resources.pri"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Views\SelectionPage.xbf"			"Views\SelectionPage.xbf"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Views\MachineInspection\StartInspectionPage.xbf"			"Views\MachineInspection\StartInspectionPage.xbf"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Views\MachineInspection\QuestionPage.xbf"			"Views\MachineInspection\QuestionPage.xbf"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Views\MachineInspection\InspectionComplete.xbf"			"Views\MachineInspection\InspectionComplete.xbf"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\StoreManifest.xml"			"StoreManifest.xml"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\MachineInspectie.xr.xml"			"MachineInspectie.xr.xml"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Assets\vanGansewinkel.png"			"Assets\vanGansewinkel.png"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Assets\StoreLogo.scale-240.png"			"Assets\StoreLogo.scale-240.png"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Assets\SplashScreen.png"			"Assets\SplashScreen.png"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Assets\LogoOk.png"			"Assets\LogoOk.png"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Assets\LogoNok.png"			"Assets\LogoNok.png"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Assets\IconWide.png"			"Assets\IconWide.png"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Assets\IconSmall1.png"			"Assets\IconSmall1.png"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Assets\IconSmall.png"			"Assets\IconSmall.png"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Assets\IconMedium.png"			"Assets\IconMedium.png"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\Assets\Icon.png"			"Assets\Icon.png"
+"C:\Users\Helix\Documents\Cvo Antwerpen HBO Informatica 2015-2016\Project Van Gansewinkel\App\MachineInspectie\MachineInspectie\obj\x86\Release\PackageLayout\App.xbf"			"App.xbf"
