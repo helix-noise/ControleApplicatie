@@ -85,12 +85,20 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dal\ControlQuestions.cs" />
-    <Compile Include="Dal\Locatie.cs" />
-    <Compile Include="Dal\Matis.cs" />
-    <Compile Include="Dal\PostQuestionList.cs" />
+    <Compile Include="Model\Helper.cs" />
+    <Compile Include="Services\CallApi.cs" />
+    <Compile Include="Services\ControlQuestions.cs" />
+    <Compile Include="Services\Locatie.cs" />
+    <Compile Include="Services\Matis.cs" />
+    <Compile Include="Services\PostQuestionList.cs" />
+    <Compile Include="Views\MachineInspection\CommentPage.xaml.cs">
+      <DependentUpon>CommentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MachineInspection\InspectionComplete.xaml.cs">
       <DependentUpon>InspectionComplete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MachineInspection\PhotoPage.xaml.cs">
+      <DependentUpon>PhotoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MachineInspection\QuestionPage.xaml.cs">
       <DependentUpon>QuestionPage.xaml</DependentUpon>
@@ -126,7 +134,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\MachineInspection\CommentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MachineInspection\InspectionComplete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MachineInspection\PhotoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

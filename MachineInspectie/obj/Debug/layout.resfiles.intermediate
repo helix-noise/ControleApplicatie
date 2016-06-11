@@ -10,7 +10,9 @@ Assets\StoreLogo.scale-240.png
 Assets\vanGansewinkel.png
 App.xbf
 MachineInspectie.xr.xml
+Views\MachineInspection\CommentPage.xbf
 Views\MachineInspection\InspectionComplete.xbf
+Views\MachineInspection\PhotoPage.xbf
 Views\MachineInspection\QuestionPage.xbf
 Views\MachineInspection\StartInspectionPage.xbf
 Views\SelectionPage.xbf
