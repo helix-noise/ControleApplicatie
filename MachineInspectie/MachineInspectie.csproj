@@ -85,9 +85,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Helper.cs" />
+    <Compile Include="Model\ControlObject.cs" />
     <Compile Include="Services\CallApi.cs" />
     <Compile Include="Services\ControlQuestions.cs" />
+    <Compile Include="Services\ErrorWarningMessage.cs" />
     <Compile Include="Services\Locatie.cs" />
     <Compile Include="Services\Matis.cs" />
     <Compile Include="Services\PostQuestionList.cs" />

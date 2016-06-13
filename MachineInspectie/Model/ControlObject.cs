@@ -7,17 +7,17 @@ using MachineInspectionLibrary;
 
 namespace MachineInspectie.Model
 {
-    public class Helper
+    public class ControlObject
     {
         public ControlQuestion ControlQuestion { get; set; }
         public ControlAnswer ControlAnswer { get; set; }
 
-        public Helper()
+        public ControlObject()
         {
             
         }
 
-        public Helper(ControlQuestion controlQuestion, ControlAnswer controlAnswer)
+        public ControlObject(ControlQuestion controlQuestion, ControlAnswer controlAnswer)
         {
             this.ControlQuestion = controlQuestion;
             this.ControlAnswer = controlAnswer;

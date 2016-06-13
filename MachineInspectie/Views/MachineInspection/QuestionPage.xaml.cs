@@ -1,25 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Runtime.Serialization;
 using System.Threading.Tasks;
-using Windows.ApplicationModel.Background;
-using Windows.Devices.Enumeration;
-using Windows.Graphics.Display;
-using Windows.Graphics.Imaging;
 using Windows.Media.Capture;
-using Windows.Media.MediaProperties;
 using Windows.Phone.UI.Input;
 using Windows.Storage;
-using Windows.Storage.Streams;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using MachineInspectie.Model;
+using MachineInspectie.Services;
 using MachineInspectie.Views.MachineInspection;
 using MachineInspectionLibrary;
 using Newtonsoft.Json;
@@ -34,28 +25,30 @@ namespace MachineInspectie
     public sealed partial class QuestionPage : Page
     {
         #region Private members
+        private readonly ApplicationDataContainer _localSettings = ApplicationData.Current.LocalSettings;
         private List<ControlQuestion> _questionList = new List<ControlQuestion>();
         private DateTime _startTimeQuestion;
         private static int _stepCounter;
-        private string _language;
-        private bool _testResult;
+        //private string _language;
+        //private bool _testResult;
         private List<ControlAnswer> _answers = new List<ControlAnswer>();
         private ControlQuestion _controlQuestion;
-        private Translation _translation;
-        private MediaCapture _captureManager;
-        private BitmapImage _photo;
+        //private Translation _translation;
+        //private MediaCapture _captureManager;
+        //private BitmapImage _photo;
         private bool _inspectionStarted;
-        private bool _undoQuestion;
-        private bool _captureActive;
-        private int _photoCount;
-        private List<ControlImage> _controlImages;
-        private string _comment;
+        //private bool _undoQuestion;
+        //private bool _captureActive;
+        //private int _photoCount;
+        //private List<ControlImage> _controlImages;
+        //private string _comment;
         #endregion
 
         public QuestionPage()
         {
             this.InitializeComponent();
             this.NavigationCacheMode = NavigationCacheMode.Enabled;
+            _stepCounter = 0;
         }
 
         private async void BackButtonPress(Object sender, BackPressedEventArgs e)
@@ -63,65 +56,31 @@ namespace MachineInspectie
             e.Handled = true;
             if (_inspectionStarted)
             {
-                string title;
-                string message;
-                string btnMessageOk;
-                string btnMessageCancel;
-                if (_language == "nl")
+                ErrorWarningMessage message = new ErrorWarningMessage();
+                if (await message.ReturnPageWarning(_localSettings.Values["Language"].ToString()) == "Ok")
                 {
-                    title = "Waarschuwing";
-                    message = "U keert terug naar de vorige vraag." + Environment.NewLine + "Het ingevoerde antwoord zal worden verwijderd.";
-                    btnMessageOk = "Doorgaan";
-                    btnMessageCancel = "Annuleren";
-                }
-                else
-                {
-                    title = "Attention";
-                    message = "Vous revenez à la question précédente, la réponse rempli sera enlevé.";
-                    btnMessageOk = "Continuez";
-                    btnMessageCancel = "Annulez";
-                }
-                var msg = new MessageDialog(message, title);
-                var okBtn = new UICommand(btnMessageOk);
-                var cancelBtn = new UICommand(btnMessageCancel);
-                msg.Commands.Add(okBtn);
-                msg.Commands.Add(cancelBtn);
-                IUICommand result = await msg.ShowAsync();
-
-                if (result != null && result.Label == btnMessageOk)
-                {
-                    _stepCounter -= 2;
-                    if (_stepCounter == 0)
+                    int itemIndex = _stepCounter - 2;
+                    ControlAnswer answer = _answers[itemIndex];
+                    _controlQuestion = _questionList[itemIndex];
+                    if (itemIndex == 0)
                     {
-                        _inspectionStarted = false;
+                        //_inspectionStarted = false;
                         _answers = new List<ControlAnswer>();
                     }
                     else
                     {
                         _answers.RemoveAt(_stepCounter);
                     }
-                    if (PhotoFrame.Visibility == Visibility.Visible)
-                    {
-                        PhotoFrame.Visibility = Visibility.Collapsed;
-                        imgPhoto.Source = null;
-                        cePreview.Source = null;
-                        btnCaptureOk.IsEnabled = false;
-                        btnCaptureReset.IsEnabled = false;
-                        btnCapture.IsEnabled = true;
-                    }
-                    if (CommentFrame.Visibility == Visibility.Visible)
-                    {
-                        CommentFrame.Visibility = Visibility.Collapsed;
-                    }
-                    _undoQuestion = true;
-                    //DoInspection();
+                    _stepCounter -= 1;
+                    ControlObject controlObject = new ControlObject(_controlQuestion, answer);
+                    this.Frame.Navigate(typeof (CommentPage), controlObject);
                 }
             }
             else
             {
                 if (Frame.CanGoBack)
                 {
-                    _stepCounter = 0;
+                    this.NavigationCacheMode = NavigationCacheMode.Disabled;
                     Frame.GoBack();
                 }
             }
@@ -135,22 +94,24 @@ namespace MachineInspectie
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             HardwareButtons.BackPressed += BackButtonPress;
-            var locallanguage = Windows.Storage.ApplicationData.Current.LocalSettings;
-            _language = locallanguage.Values["Language"].ToString();
-
-            if (e.Parameter.GetType() == typeof(List<ControlQuestion>))
+            if (e.Parameter != null && e.Parameter.GetType() == typeof(List<ControlQuestion>))
             {
                 _questionList = (List<ControlQuestion>)e.Parameter;
-                btnCapture.Content = _language == "nl" ? "Neem foto" : "Prenez une photo";
-                btnNextCapture.Content = _language == "nl" ? "Volgende foto" : "Prochaine photo";
-                btnCaptureOk.Content = _language == "nl" ? "Volgende vraag" : "Prochaine question";
-                btnComment.Content = _language == "nl" ? "Volgende vraag" : "Prochaine question";
-                DoInspectionn();
+                DoInspection();
+            }
+            else if (e.Parameter != null && e.Parameter.GetType() == typeof (ControlAnswer))
+            {
+                _answers.Add(e.Parameter as ControlAnswer);
+                DoInspection();
             }
             else
             {
-                _answers.Add(e.Parameter as ControlAnswer);
-                DoInspectionn();
+                _stepCounter -= 1;
+                if (_stepCounter == 0)
+                {
+                    _inspectionStarted = false;
+                }
+                DoInspection();
             }
         }
 
@@ -159,45 +120,58 @@ namespace MachineInspectie
             HardwareButtons.BackPressed -= BackButtonPress;
         }
 
+        public void DoInspection()
+        {
+            if (_stepCounter < _questionList.Count)
+            {
+                _startTimeQuestion = DateTime.Now;
+                _controlQuestion = _questionList[_stepCounter];
+                Translation translation = _controlQuestion.translations[0];
+                lblQuestion.Text = translation.question;
+                _stepCounter += 1;
+            }
+            else
+            {
+                lblQuestion.Text = _localSettings.Values["Language"].ToString() == "nl"
+                    ? "De controlevragen werden met succes beantwoord"
+                    : "Les questions de contrôle sont répondues avec succès";
+                btnContinue.Content = _localSettings.Values["Language"].ToString() == "nl" ? "Doorgaan" : "Continuer";
+                btnOk.Visibility = Visibility.Collapsed;
+                btnNok.Visibility = Visibility.Collapsed;
+                btnContinue.Visibility = Visibility.Visible;
+                //
+                //var localSave = ApplicationData.Current.LocalSettings;
+                //ControlReport report = JsonConvert.DeserializeObject<ControlReport>(localSave.Values["TempControlReport"].ToString());
+                //report.endTime = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:sszzz");
+                //localSave.Values["TempControlReport"] = JsonConvert.SerializeObject(report);
+                //this.NavigationCacheMode = NavigationCacheMode.Disabled;
+                //this.Frame.Navigate(typeof(InspectionComplete), _answers);
+            }
+        }
+
         #region QuestionListFrame
 
         private void btnOk_Nok_Click(object sender, RoutedEventArgs e)
         {
             _inspectionStarted = true;
-            _testResult = sender == btnOk;
-            //Test1
-            //if (_controlQuestion.imageRequired)
-            //{
-            //    PhotoFrame.Visibility = Visibility.Visible;
-            //    StartCamera();
-            //}
-            //else
-            //{
-            //    DoInspection();
-            //}
-
-            //TODO: Werkende versie
-            //Test2
-            //PhotoFrame.Visibility = Visibility.Visible;
-            //StartCamera();
-            //if (_controlQuestion.imageRequired)
-            //{
-            //    btnCaptureOk.IsEnabled = false;
-            //}
-            //else
-            //{
-            //    btnCaptureOk.IsEnabled = true;
-            //}
-
-            //TODO: Aanpassen
             ControlAnswer controlAnswer = new ControlAnswer
             {
                 controlQuestionId = _controlQuestion.id,
                 startTime = _startTimeQuestion.ToString("yyyy-MM-ddTHH:mm:sszzz"),
                 testOk = sender == btnOk
             };
-            Helper helper = new Helper(_controlQuestion, controlAnswer);
-            this.Frame.Navigate(typeof(PhotoPage), helper);
+            ControlObject controlObject = new ControlObject(_controlQuestion, controlAnswer);
+            this.Frame.Navigate(typeof(PhotoPage), controlObject);
+        }
+
+        private void btnContinue_Click(object sender, RoutedEventArgs e)
+        {
+            var localSave = ApplicationData.Current.LocalSettings;
+            ControlReport report = JsonConvert.DeserializeObject<ControlReport>(localSave.Values["TempControlReport"].ToString());
+            report.endTime = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:sszzz");
+            localSave.Values["TempControlReport"] = JsonConvert.SerializeObject(report);
+            this.NavigationCacheMode = NavigationCacheMode.Disabled;
+            this.Frame.Navigate(typeof(InspectionComplete), _answers);
         }
 
         //public void DoInspection()
@@ -247,28 +221,6 @@ namespace MachineInspectie
         //    }
 
         //}
-
-        public void DoInspectionn()
-        {
-            if (_stepCounter < _questionList.Count)
-            {
-                _startTimeQuestion = DateTime.Now;
-                _controlQuestion = _questionList[_stepCounter];
-                Translation translation = _controlQuestion.translations[0];
-                lblQuestion.Text = translation.question;
-                _stepCounter += 1;
-            }
-            else
-            {
-                var localSave = ApplicationData.Current.LocalSettings;
-                ControlReport report = JsonConvert.DeserializeObject<ControlReport>(localSave.Values["TempControlReport"].ToString());
-                report.endTime = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:sszzz");
-                localSave.Values["TempControlReport"] = JsonConvert.SerializeObject(report);
-                this.Frame.Navigate(typeof(InspectionComplete), _answers);
-            }
-        }
-
-
 
         #endregion
 

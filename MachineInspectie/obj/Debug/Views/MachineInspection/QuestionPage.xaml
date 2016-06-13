@@ -10,21 +10,22 @@
         <Frame x:Name="QuestionListFrame" Visibility="Visible">
             <Grid Background="White">
                 <TextBlock x:Name="lblQuestion" HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="235" Width="587" FontWeight="Bold" Foreground="Black" FontSize="36" TextAlignment="Center"/>
-                <Button x:ConnectionId='6' x:Name="btnOk" CommandParameter="0" Content="Ok" HorizontalAlignment="Left" Margin="356,281,0,0" VerticalAlignment="Top" Height="92" Width="195" Background="#FF27F706" Foreground="Black" FontSize="24" FontWeight="Bold" BorderBrush="#FF06428D"                        />
-                <Button x:ConnectionId='7' x:Name="btnNok" CommandParameter="0" Content="Nok" HorizontalAlignment="Left" Margin="39,281,0,0" VerticalAlignment="Top" Height="92" Width="195" Background="#FFF70606" Foreground="Black" FontSize="24" FontWeight="Bold" BorderBrush="#FF06428D"                        />
+                <Button x:ConnectionId='1' x:Name="btnOk" CommandParameter="0" Content="Ok" HorizontalAlignment="Left" Margin="356,281,0,0" VerticalAlignment="Top" Height="92" Width="195" Background="#FF27F706" Foreground="Black" FontSize="24" FontWeight="Bold" BorderBrush="#FF06428D"                        />
+                <Button x:ConnectionId='2' x:Name="btnNok" CommandParameter="0" Content="Nok" HorizontalAlignment="Left" Margin="39,281,0,0" VerticalAlignment="Top" Height="92" Width="195" Background="#FFF70606" Foreground="Black" FontSize="24" FontWeight="Bold" BorderBrush="#FF06428D"                        />
+                <Button x:ConnectionId='3' x:Name="btnContinue" Visibility="Collapsed" CommandParameter="0" HorizontalAlignment="Center" Margin="0,281,0,0" VerticalAlignment="Top" Height="92" Width="195" Foreground="Black" FontSize="18.14" BorderBrush="#FF06428D"                          />
             </Grid>
         </Frame>
-        <Frame x:Name="PhotoFrame" Visibility="Collapsed">
+        <!--<Frame x:Name="PhotoFrame" Visibility="Collapsed">
             <Grid Background="White">
                 <Image x:Name="imgPhoto" HorizontalAlignment="Left" Height="282" VerticalAlignment="Top" Width="587" Margin="10,10,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
                     <Image.RenderTransform>
                         <CompositeTransform/>
                     </Image.RenderTransform>
                 </Image>
-                <Button x:ConnectionId='2' x:Name="btnCapture" Content="" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" Height="97" Width="189" BorderBrush="#FF06428D" Foreground="Black"                         />
-                <Button x:ConnectionId='3' x:Name="btnNextCapture" Visibility="Collapsed" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" Height="97" Width="189" BorderBrush="#FF06428D" Foreground="Black"                             />
-                <Button x:ConnectionId='4' x:Name="btnCaptureReset" IsEnabled="False" Content="Reset" HorizontalAlignment="Left" Margin="204,303,0,0" VerticalAlignment="Top" Height="97" Width="201" BorderBrush="#FF06428D" Foreground="Black"                              />
-                <Button x:ConnectionId='5' x:Name="btnCaptureOk" IsEnabled="False" HorizontalAlignment="Left" Margin="410,303,0,0" VerticalAlignment="Top" Height="97" Width="187" BorderBrush="#FF06428D" Foreground="Black"                           />
+                <Button x:Name="btnCapture" Content="" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" Height="97" Width="189" BorderBrush="#FF06428D" Foreground="Black" Click="btnCapture_Click"/>
+                <Button x:Name="btnNextCapture" Visibility="Collapsed" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" Height="97" Width="189" BorderBrush="#FF06428D" Foreground="Black" Click="btnNextCapture_Click"/>
+                <Button x:Name="btnCaptureReset" IsEnabled="False" Content="Reset" HorizontalAlignment="Left" Margin="204,303,0,0" VerticalAlignment="Top" Height="97" Width="201" BorderBrush="#FF06428D" Foreground="Black" Click="btnCaptureReset_Click"/>
+                <Button x:Name="btnCaptureOk" IsEnabled="False" HorizontalAlignment="Left" Margin="410,303,0,0" VerticalAlignment="Top" Height="97" Width="187" BorderBrush="#FF06428D" Foreground="Black" Click="btnCaptureOk_Click"/>
                 <CaptureElement x:Name="cePreview" HorizontalAlignment="Left" Height="282" VerticalAlignment="Top" Width="587" Margin="10,10,0,0" Stretch="Fill"/>
             </Grid>
         </Frame>
@@ -32,9 +33,9 @@
             <Grid Background="White">
                 <TextBlock x:Name="lblComment" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="145" Width="587" Foreground="Black" FontSize="30" FontWeight="Bold" TextAlignment="Center"/>
                 <TextBox x:Name="txtComment" HorizontalAlignment="Left" Margin="10,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="112" Width="587" AcceptsReturn="True" FontSize="22"/>
-                <Button x:ConnectionId='1' x:Name="btnComment" HorizontalAlignment="Center" Margin="210,285,210,0" VerticalAlignment="Top" Height="97" Width="187" BorderBrush="#FF06428D" Foreground="Black"                         />
+                <Button x:Name="btnComment" HorizontalAlignment="Center" Margin="210,285,210,0" VerticalAlignment="Top" Height="97" Width="187" BorderBrush="#FF06428D" Foreground="Black" Click="btnComment_Click"/>
             </Grid>
-        </Frame>
+        </Frame>-->
     </Grid>
 </Page>
 

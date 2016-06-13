@@ -11,7 +11,7 @@
     <Grid Background="White">
         <Button x:Name="btnSend" Content="" HorizontalAlignment="Center" Margin="210,285,210,0" VerticalAlignment="Top" Height="97" Width="187" BorderBrush="#FF06428D" Foreground="Black" Click="btnSend_Click"/>
         <Button x:Name="btnHome" Content="" HorizontalAlignment="Center" Margin="210,285,210,0" VerticalAlignment="Top" Height="97" Width="187" BorderBrush="#FF06428D" Foreground="Black" Visibility="Collapsed" Click="btnHome_Click"/>
-        <TextBlock x:Name="lblComplete" HorizontalAlignment="Center" Margin="10,10,10,217" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Height="173" Width="587" Foreground="Black" FontSize="34" TextAlignment="Center"/>
+        <TextBlock x:Name="lblComplete" HorizontalAlignment="Center" Margin="10,29,10,217" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Height="154" Width="587" Foreground="Black" FontSize="36"  TextAlignment="Center" FontWeight="Bold"/>
         <ProgressRing x:Name="prSendData" Visibility="Visible" HorizontalAlignment="Center" Margin="275,206,275,0" VerticalAlignment="Top" Foreground="#FF06428D" Background="White"/>
         <Image x:Name="imgOk" Visibility="Collapsed" HorizontalAlignment="Left" Height="57" Margin="275,206,0,0" VerticalAlignment="Top" Width="57" Source="../../Assets/LogoOk.png"/>
         <Image x:Name="imgNok" Visibility="Collapsed" HorizontalAlignment="Left" Height="57" Margin="275,206,0,0" VerticalAlignment="Top" Width="57" Source="../../Assets/LogoNok.png"/>

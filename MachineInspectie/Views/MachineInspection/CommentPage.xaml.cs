@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MachineInspectie.Model;
+using MachineInspectie.Services;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -25,7 +26,7 @@ namespace MachineInspectie.Views.MachineInspection
     /// </summary>
     public sealed partial class CommentPage : Page
     {
-        private Helper _helper;
+        private ControlObject _controlObject;
         private readonly ApplicationDataContainer _localSettings = ApplicationData.Current.LocalSettings;
 
         public CommentPage()
@@ -41,12 +42,12 @@ namespace MachineInspectie.Views.MachineInspection
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            _helper = e.Parameter as Helper;
+            _controlObject = e.Parameter as ControlObject;
             lblComment.Text = _localSettings.Values["Language"].ToString() == "nl"
                 ? "Wenst u een opmerking te geven over:" + Environment.NewLine +
-                  _helper.ControlQuestion.translations[0].question
+                  _controlObject.ControlQuestion.translations[0].question
                 : "Voudriez-vous donner une remarque sur:" + Environment.NewLine +
-                  _helper.ControlQuestion.translations[0].question;
+                  _controlObject.ControlQuestion.translations[0].question;
             btnNext.Content = _localSettings.Values["Language"].ToString() == "nl"
                 ? "Volgende vraag"
                 : "Prochaine question";
@@ -57,16 +58,22 @@ namespace MachineInspectie.Views.MachineInspection
             HardwareButtons.BackPressed -= BackButtonPress;
         }
 
-        private void BackButtonPress(Object sender, BackPressedEventArgs e)
+        private async void BackButtonPress(Object sender, BackPressedEventArgs e)
         {
             e.Handled = true;
+            ErrorWarningMessage message = new ErrorWarningMessage();
+            if (await message.ReturnPageWarning(_localSettings.Values["Language"].ToString()) == "Ok")
+            {
+                _controlObject.ControlAnswer.images.Clear();
+                this.Frame.Navigate(typeof (PhotoPage), _controlObject);
+            }
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
-            _helper.ControlAnswer.comment = txtComment.Text;
-            _helper.ControlAnswer.endTime = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:sszzz");
-            this.Frame.Navigate(typeof (QuestionPage), _helper.ControlAnswer);
+            _controlObject.ControlAnswer.comment = txtComment.Text;
+            _controlObject.ControlAnswer.endTime = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:sszzz");
+            this.Frame.Navigate(typeof (QuestionPage), _controlObject.ControlAnswer);
         }
     }
 }

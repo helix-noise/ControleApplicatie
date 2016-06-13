@@ -132,13 +132,20 @@ namespace MachineInspectie
         {
             tgbFr.IsChecked = false;
             SaveLanguage("nl");
+            if (tgbNl.IsChecked == false && tgbFr.IsChecked == false)
+            {
+                tgbNl.IsChecked = true;
+            }
         }
 
         private void tgbFr_Click(object sender, RoutedEventArgs e)
         {
             tgbNl.IsChecked = false;
             SaveLanguage("fr");
-
+            if (tgbNl.IsChecked == false && tgbFr.IsChecked == false)
+            {
+                tgbFr.IsChecked = true;
+            }
         }
     }
 }

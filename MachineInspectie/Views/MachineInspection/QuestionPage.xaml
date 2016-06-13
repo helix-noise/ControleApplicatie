@@ -12,9 +12,10 @@
                 <TextBlock x:Name="lblQuestion" HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="235" Width="587" FontWeight="Bold" Foreground="Black" FontSize="36" TextAlignment="Center"/>
                 <Button x:Name="btnOk" CommandParameter="0" Content="Ok" HorizontalAlignment="Left" Margin="356,281,0,0" VerticalAlignment="Top" Height="92" Width="195" Background="#FF27F706" Foreground="Black" FontSize="24" FontWeight="Bold" BorderBrush="#FF06428D" Click="btnOk_Nok_Click"/>
                 <Button x:Name="btnNok" CommandParameter="0" Content="Nok" HorizontalAlignment="Left" Margin="39,281,0,0" VerticalAlignment="Top" Height="92" Width="195" Background="#FFF70606" Foreground="Black" FontSize="24" FontWeight="Bold" BorderBrush="#FF06428D" Click="btnOk_Nok_Click"/>
+                <Button x:Name="btnContinue" Visibility="Collapsed" CommandParameter="0" HorizontalAlignment="Center" Margin="0,281,0,0" VerticalAlignment="Top" Height="92" Width="195" Foreground="Black" FontSize="18.14" BorderBrush="#FF06428D" Click="btnContinue_Click"/>
             </Grid>
         </Frame>
-        <Frame x:Name="PhotoFrame" Visibility="Collapsed">
+        <!--<Frame x:Name="PhotoFrame" Visibility="Collapsed">
             <Grid Background="White">
                 <Image x:Name="imgPhoto" HorizontalAlignment="Left" Height="282" VerticalAlignment="Top" Width="587" Margin="10,10,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
                     <Image.RenderTransform>
@@ -34,6 +35,6 @@
                 <TextBox x:Name="txtComment" HorizontalAlignment="Left" Margin="10,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="112" Width="587" AcceptsReturn="True" FontSize="22"/>
                 <Button x:Name="btnComment" HorizontalAlignment="Center" Margin="210,285,210,0" VerticalAlignment="Top" Height="97" Width="187" BorderBrush="#FF06428D" Foreground="Black" Click="btnComment_Click"/>
             </Grid>
-        </Frame>
+        </Frame>-->
     </Grid>
 </Page>

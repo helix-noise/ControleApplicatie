@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Devices.Enumeration;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Graphics.Imaging;
 using Windows.Media.Capture;
 using Windows.Media.MediaProperties;
@@ -15,13 +11,10 @@ using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using MachineInspectie.Model;
+using MachineInspectie.Services;
 using MachineInspectionLibrary;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
@@ -33,20 +26,20 @@ namespace MachineInspectie.Views.MachineInspection
     /// </summary>
     public sealed partial class PhotoPage : Page
     {
+        private readonly ApplicationDataContainer _localSettings = ApplicationData.Current.LocalSettings;
         private MediaCapture _captureManager;
         private bool _captureActive;
         private int _photoCount;
-        private BitmapImage _photo;
         private List<ControlImage> _controlImages;
         //private ControlQuestion _controlQuestion;
         //private ControlAnswer _controlAnswer;
-        private Helper _helper;
-        private readonly ApplicationDataContainer _localSettings = ApplicationData.Current.LocalSettings;
+        private ControlObject _controlObject;
 
         public PhotoPage()
         {
             this.InitializeComponent();
             HardwareButtons.BackPressed += BackButtonPress;
+            _photoCount = 0;
         }
 
         /// <summary>
@@ -56,7 +49,7 @@ namespace MachineInspectie.Views.MachineInspection
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            _helper = e.Parameter as Helper;
+            _controlObject = e.Parameter as ControlObject;
             btnCapture.Content = _localSettings.Values["Language"].ToString() == "nl" ? "Neem foto" : "Prenez une photo";
             btnNextCapture.Content = _localSettings.Values["Language"].ToString() == "nl" ? "Volgende foto" : "Prochaine photo";
             btnCaptureOk.Content = _localSettings.Values["Language"].ToString() == "nl" ? "Volgende vraag" : "Prochaine question";
@@ -68,20 +61,36 @@ namespace MachineInspectie.Views.MachineInspection
             HardwareButtons.BackPressed -= BackButtonPress;
         }
 
-        private void BackButtonPress(Object sender, BackPressedEventArgs e)
+        private async void BackButtonPress(Object sender, BackPressedEventArgs e)
         {
             e.Handled = true;
+            ErrorWarningMessage message = new ErrorWarningMessage();
+            if (await message.ReturnPageWarning(_localSettings.Values["Language"].ToString()) == "Ok")
+            {
+                StorageFolder folder = ApplicationData.Current.LocalFolder;
+                IReadOnlyList<StorageFile> filesInFolder = await folder.GetFilesAsync();
+                if (filesInFolder.Count != 0)
+                {
+                    foreach (var storageFile in filesInFolder)
+                    {
+                        var deleteFile = await folder.GetFileAsync(storageFile.Name);
+                        await deleteFile.DeleteAsync();
+                    }
+                }
+                if (_captureActive)
+                {
+                    await _captureManager.StopPreviewAsync();
+                    _captureActive = false;
+                }
+                this.Frame.Navigate(typeof(QuestionPage));
+            }
         }
 
         #region UiButtons
         private async void btnCapture_Click(object sender, RoutedEventArgs e)
         {
-            //
             InMemoryRandomAccessStream imageStream = new InMemoryRandomAccessStream();
-            //
-
             _photoCount += 1;
-            btnCapture.IsEnabled = false;
             btnCapture.Visibility = Visibility.Collapsed;
             ImageEncodingProperties imgFormat = ImageEncodingProperties.CreateJpeg();
             await _captureManager.CapturePhotoToStreamAsync(imgFormat, imageStream);
@@ -95,8 +104,7 @@ namespace MachineInspectie.Views.MachineInspection
                         CreationCollisionOption.GenerateUniqueName);
             var filestream = await file.OpenAsync(FileAccessMode.ReadWrite);
             await RandomAccessStream.CopyAsync(imageStream, filestream);
-            _photo = new BitmapImage(new Uri(file.Path));
-            imgPhoto.Source = _photo;
+            imgPhoto.Source = new BitmapImage(new Uri(file.Path));
             await _captureManager.StopPreviewAsync();
             btnCaptureReset.IsEnabled = true;
             btnCaptureOk.IsEnabled = true;
@@ -114,17 +122,15 @@ namespace MachineInspectie.Views.MachineInspection
             StartCamera();
             btnNextCapture.Visibility = Visibility.Collapsed;
             btnCapture.Visibility = Visibility.Visible;
-            btnCapture.IsEnabled = true;
+            btnCaptureReset.IsEnabled = false;
+            btnCaptureOk.IsEnabled = false;
         }
 
         private void btnCaptureReset_Click(object sender, RoutedEventArgs e)
         {
             _photoCount -= 1;
             imgPhoto.Source = null;
-            _photo = null;
-            btnCapture.IsEnabled = true;
             btnCaptureReset.IsEnabled = false;
-
             btnNextCapture.Visibility = Visibility.Collapsed;
             btnCapture.Visibility = Visibility.Visible;
             if (_controlImages.Count == 1)
@@ -135,32 +141,30 @@ namespace MachineInspectie.Views.MachineInspection
             {
                 _controlImages.RemoveAt(_photoCount);
             }
-            if (_helper.ControlQuestion.imageRequired && _photoCount == 0)
+            if (_controlObject.ControlQuestion.imageRequired && _photoCount == 0)
             {
                 btnCaptureOk.IsEnabled = false;
             }
             StartCamera();
         }
 
-        private async void btnCaptureOk_Click(object sender, RoutedEventArgs e)
+        private void btnCaptureOk_Click(object sender, RoutedEventArgs e)
         {
-            btnNextCapture.Visibility = Visibility.Collapsed;
-            btnCapture.Visibility = Visibility.Visible;
-            imgPhoto.Source = null;
-            cePreview.Source = null;
-            btnCaptureOk.IsEnabled = false;
-            btnCaptureReset.IsEnabled = false;
-            btnCapture.IsEnabled = true;
-            if (_captureActive)
-            {
-                await _captureManager.StopPreviewAsync();
-                _captureActive = false;
-            }
-            _photoCount = 0;
+            //btnNextCapture.Visibility = Visibility.Collapsed;
+            //btnCapture.Visibility = Visibility.Visible;
+            //imgPhoto.Source = null;
+            //cePreview.Source = null;
+            //btnCaptureOk.IsEnabled = false;
+            //btnCaptureReset.IsEnabled = false;
+            //if (_captureActive)
+            //{
+            //    await _captureManager.StopPreviewAsync();
+            //    _captureActive = false;
+            //}
 
             //TODO: aanpassen
-            _helper.ControlAnswer.images = _controlImages;
-            this.Frame.Navigate(typeof (CommentPage), _helper);
+            _controlObject.ControlAnswer.images = _controlImages;
+            this.Frame.Navigate(typeof(CommentPage), _controlObject);
         }
         #endregion
 
